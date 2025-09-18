@@ -1,5 +1,6 @@
 package com.example.prcatica_git
 
+import Screen.Bandera
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -18,6 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            Bandera()
             Prcatica_gitTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
@@ -32,17 +34,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
 
-        text = "Hello $name!",
-        modifier = modifier
-    )
+        Bandera()
+
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     Prcatica_gitTheme {
-        Greeting("Android")
+        Bandera()
     }
 }
